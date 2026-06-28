@@ -1,0 +1,159 @@
+# The Site Configuration
+
+theme: jekyll-theme-chirpy
+
+lang: en
+timezone: Africa/Casablanca
+
+title: MHx1
+tagline: Offensive Security | Bug Bounty | CTF Player
+description: >-
+  Personal cybersecurity blog by Haitam (MHx1), covering offensive security,
+  bug bounty methodology, CTF writeups, web application security, and certification notes.
+
+url: ""
+baseurl: ""
+
+github:
+  username: MHx1
+
+twitter:
+  username:
+
+social:
+  name: Haitam
+  email: mriouchh@gmail.com
+  links:
+    - https://github.com/MHx1
+    - https://www.linkedin.com/in/haitam-mriouch-378555339/
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+analytics:
+  google:
+    id:
+  goatcounter:
+    id:
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+pageviews:
+  provider:
+
+theme_mode: dark
+
+cdn:
+avatar: /assets/img/avatar-mhx1-new.png
+social_preview_image:
+
+toc: true
+
+comments:
+  provider:
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+kramdown:
+  footnote_backlink: "back"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+permalink: /posts/:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+exclude:
+  - node_modules
+  - README.md
+  - LICENSE
+  - "*.gem"
+  - "*.gemspec"

@@ -1,0 +1,153 @@
+---
+---
+
+@import 'main';
+
+:root {
+  --main-bg: #11161d;
+  --sidebar-bg: #0f141b;
+  --topbar-bg: #11161d;
+  --mask-bg: rgba(0, 0, 0, 0.8);
+  --main-border-color: rgba(159, 215, 255, 0.16);
+  --link-color: #9fd7ff;
+  --link-underline-color: rgba(159, 215, 255, 0.5);
+  --heading-color: #e5e7eb;
+  --text-color: #d1d5db;
+  --text-muted-color: #9ca3af;
+  --blockquote-border-color: #9fd7ff;
+  --code-header-text-color: #9fd7ff;
+}
+
+body {
+  background:
+    linear-gradient(135deg, rgba(159, 215, 255, 0.035), transparent 34rem),
+    linear-gradient(315deg, rgba(120, 68, 74, 0.035), transparent 30rem),
+    #11161d;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.012) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  mix-blend-mode: normal;
+}
+
+html,
+body,
+#main-wrapper,
+#main,
+#core-wrapper,
+#tail-wrapper,
+#search-result-wrapper {
+  background-color: #11161d;
+}
+
+#sidebar {
+  background-color: #0f141b;
+  border-right: 1px solid rgba(159, 215, 255, 0.12);
+}
+
+#topbar-wrapper,
+#topbar {
+  background: #11161d;
+  box-shadow: none;
+}
+
+#breadcrumb,
+#topbar-title,
+#search-trigger,
+#search-wrapper {
+  background-color: transparent;
+}
+
+footer {
+  background: #11161d;
+  border-top: 1px solid rgba(159, 215, 255, 0.12);
+  box-shadow: none;
+}
+
+.post-preview,
+.card,
+#panel-wrapper .post-tag,
+#search-wrapper {
+  background-color: #171d26;
+}
+
+#sidebar .site-title,
+h1,
+h2,
+h3,
+h4,
+.post-title {
+  letter-spacing: 0;
+}
+
+#sidebar .site-title,
+a,
+.post-tail-wrapper .license-wrapper > a {
+  color: #9fd7ff;
+}
+
+#sidebar #avatar,
+#sidebar #avatar > a,
+#sidebar #avatar img {
+  border-radius: 50%;
+}
+
+#sidebar #avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #020202;
+  border: 1px solid rgba(210, 225, 235, 0.36);
+  box-shadow:
+    0 0 18px rgba(159, 215, 255, 0.12),
+    inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+#sidebar #avatar img {
+  width: 100%;
+  height: 100%;
+  padding: 4%;
+  object-fit: contain;
+  background: #020202;
+}
+
+#sidebar .sidebar-bottom a {
+  color: #9fd7ff;
+}
+
+#sidebar .sidebar-bottom a:hover {
+  transform: translateY(-2px);
+}
+
+.post-preview,
+.card,
+#panel-wrapper .post-tag {
+  border-color: rgba(159, 215, 255, 0.2);
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "JetBrains Mono", Consolas, "Liberation Mono", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9fd7ff;
+  border: 3px solid #050505;
+}
