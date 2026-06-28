@@ -4,6 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
-Gemfile.lock
+.bundle-user/
+jekyll-server*.log
 node_modules/
 .next/

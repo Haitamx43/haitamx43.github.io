@@ -11,7 +11,7 @@ description: >-
   Personal cybersecurity blog by Haitam (MHx1), covering offensive security,
   bug bounty methodology, CTF writeups, web application security, and certification notes.
 
-url: ""
+url: "https://haitamx43.github.io"
 baseurl: ""
 
 github:
@@ -57,7 +57,7 @@ pageviews:
 theme_mode: dark
 
 cdn:
-avatar: /assets/img/avatar-mhx1-new.png
+avatar: /assets/img/avatar-mhx1-profile.png
 social_preview_image:
 
 toc: true
@@ -86,9 +86,9 @@ assets:
     env:
 
 pwa:
-  enabled: true
+  enabled: false
   cache:
-    enabled: true
+    enabled: false
     deny_paths:
 
 paginate: 10
@@ -153,6 +153,11 @@ jekyll-archives:
 
 exclude:
   - node_modules
+  - vendor
+  - .bundle
+  - .bundle-user
+  - jekyll-server*.log
+  - POSTING_GUIDE.md
   - README.md
   - LICENSE
   - "*.gem"

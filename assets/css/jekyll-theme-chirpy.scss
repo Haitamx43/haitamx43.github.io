@@ -25,18 +25,6 @@ body {
     #11161d;
 }
 
-body::before {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.012) 50%, rgba(0, 0, 0, 0.1) 50%);
-  background-size: 100% 4px;
-  mix-blend-mode: normal;
-}
-
 html,
 body,
 #main-wrapper,
@@ -103,19 +91,46 @@ a,
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #020202;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(159, 215, 255, 0.42), rgba(39, 68, 104, 0.74) 45%, #172130 78%);
   border: 1px solid rgba(210, 225, 235, 0.36);
   box-shadow:
     0 0 18px rgba(159, 215, 255, 0.12),
     inset 0 0 12px rgba(255, 255, 255, 0.04);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 #sidebar #avatar img {
+  display: block;
   width: 100%;
   height: 100%;
-  padding: 4%;
-  object-fit: contain;
-  background: #020202;
+  object-fit: cover;
+  transform: scale(0.96);
+  background: transparent;
+  opacity: 0;
+  mix-blend-mode: normal;
+  transition:
+    opacity 120ms ease-out,
+    transform 220ms ease;
+}
+
+#sidebar #avatar img.is-loaded {
+  opacity: 1;
+}
+
+#sidebar #avatar:hover {
+  border-color: rgba(159, 215, 255, 0.72);
+  box-shadow:
+    0 0 24px rgba(159, 215, 255, 0.28),
+    inset 0 0 16px rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+#sidebar #avatar:hover img {
+  transform: scale(1);
 }
 
 #sidebar .sidebar-bottom a {
